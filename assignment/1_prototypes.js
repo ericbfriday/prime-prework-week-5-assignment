@@ -2,6 +2,9 @@ function Animal(first, last, type) {
     this.firstName = first;
     this.lastName = last;
     this.type = type;
+    this.meow = function() {
+      console.log("meow");
+    };
 }
 
 // here's an example Animal:
@@ -11,18 +14,26 @@ var giantCactus = new Animal( "Giant", "Cactus", "Dog" );
 // create a new animal named "somethingFun" with a first name of "Something"
 // a last name of "Fun" and a type of "Cat"
 
+var somethingFun = new Animal("Something", "Fun" , "Cat");
+
 // PART 2
 // Complete this function so that it will log on seperate lines the first and
 // last name of an Animal object that is passed to it.
-function animalFirstandLastName(animalObject){
+var animalFirstandLastName = function(animalObject) {
   // console log out animalObject's first name here:
-
+  console.log(animalObject.firstName);
   // console log out animalObject's last name here:
-}
+  console.log(animalObject.lastName);
+};
+
+// Testing below
+animalFirstandLastName(giantCactus);
+animalFirstandLastName(somethingFun);
 
 // PART 3 (Hard Mode)
 // add a method to somethingFun named "meow()" that console logs
 // "meow" when called. ex: somethingFun.meow()
+somethingFun.meow();
 
 // add another method to somethingFun named "isHappy" that receives a boolean
 // argument called "happy".
