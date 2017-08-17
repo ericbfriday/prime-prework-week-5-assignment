@@ -33,7 +33,7 @@ animalFirstandLastName(somethingFun);
 // "meow" when called. ex: somethingFun.meow()
 somethingFun.meow = function() {
     console.log("meow");
-}
+};
 
 // Testing somethingFun.meow();
 somethingFun.meow();
